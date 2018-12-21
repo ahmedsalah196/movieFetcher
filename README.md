@@ -4,4 +4,5 @@
 
 Issues:
 - reuqest failing when no internet connection could have been solved using reachability library developed by apple
+
 // other issues to be added when discovered
