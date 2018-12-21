@@ -16,6 +16,7 @@ class deatailsTableViewCell: UITableViewCell,UITextViewDelegate {
     @IBOutlet weak var preview: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.accessibilityHint = "details"
     }
     func setCell(title:String, date:String, text : String, image: UIImage){
         self.title.text = String("Title: \(title)")

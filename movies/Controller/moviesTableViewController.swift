@@ -7,10 +7,10 @@
 //
 
 import UIKit
-var indexToAllmovies = 1
-var indexToMyMovies = 0
-class moviesTableViewController: UITableViewController {
 
+class moviesTableViewController: UITableViewController {
+    var indexToAllmovies = 1
+    var indexToMyMovies = 0
     var clickedIndex = -1
     var clickedSection = -1
     var twoDimensionalMovies: [[MovieWithPic]] = [[],[]]
@@ -36,8 +36,9 @@ class moviesTableViewController: UITableViewController {
         self.addChildViewController(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
         popOverVC.tablecontroller = self
+        self.view.isAccessibilityElement = false
+        popOverVC.didMove(toParentViewController: self)
     }
     
     //called when data is fetched by the data fetcher

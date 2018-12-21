@@ -159,7 +159,6 @@
 			children = (
 				7E94D1CC21C9895000956FB3 /* loadingTableViewCell.swift */,
 				7E94D1C621C87DA200956FB3 /* abstractTableViewCell.swift */,
-				7E6D32E521CA81080052F275 /* popOver.swift */,
 				7E94D1C821C9430800956FB3 /* deatailsTableViewCell.swift */,
 			);
 			path = View;
@@ -172,6 +171,7 @@
 				7E6D32E321C9AF5F0052F275 /* titleAndDateViewController.swift */,
 				7E6D32E721CA83570052F275 /* imagePicker.swift */,
 				7E6D32E921CA84060052F275 /* OverviewPopUp.swift */,
+				7E6D32E521CA81080052F275 /* popOver.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

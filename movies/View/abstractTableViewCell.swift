@@ -16,6 +16,7 @@ class abstractTableViewCell: UITableViewCell {
     @IBOutlet weak var releaseDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.accessibilityIdentifier = "abstract"
     }
     func setCell(title: String, date: String, image: UIImage){
         self.movieTitle.text=title

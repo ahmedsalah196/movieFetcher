@@ -31,13 +31,22 @@ class moviesUITests: XCTestCase {
     func testExpandCollapseSection() {
         
         let app = XCUIApplication()
+        while app.tables.cells.count<2 {
+        }
+        var firstTablecell = XCUIApplication().tables.cells.element(boundBy: 0)
+        XCTAssertEqual(firstTablecell.identifier, "abstract")
+        firstTablecell.tap()
+        firstTablecell = XCUIApplication().tables.cells.element(boundBy: 0)
+        XCTAssertEqual(firstTablecell.identifier, "details")
+        firstTablecell.tap()
+        firstTablecell = XCUIApplication().tables.cells.element(boundBy: 0)
+        XCTAssertEqual(firstTablecell.identifier, "abstract")
         let allMoviesButton = app.tables/*@START_MENU_TOKEN@*/.buttons["All Movies"]/*[[".otherElements[\"All Movies\"].buttons[\"All Movies\"]",".buttons[\"All Movies\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         allMoviesButton.tap()
         XCTAssertEqual(XCUIApplication().tables.cells.count , 0)
         allMoviesButton.tap()
         XCTAssertGreaterThan(XCUIApplication().tables.cells.count , 0)
-
+        
     }
-
     
 }

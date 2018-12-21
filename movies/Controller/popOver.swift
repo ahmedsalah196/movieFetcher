@@ -20,6 +20,7 @@ class popOver: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.showAnimate()
+        self.isAccessibilityElement = true
     }
     
     @IBAction func closePopup(_ sender: Any) {
