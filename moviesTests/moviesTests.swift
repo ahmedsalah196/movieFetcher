@@ -17,7 +17,6 @@ class moviesTests: XCTestCase {
         super.setUp()
         tablecontroller = UIStoryboard(name: "Main", bundle: Bundle(for: moviesTableViewController.self)).instantiateViewController(withIdentifier: "moviesTableController") as? moviesTableViewController
         tablecontroller.loadViewIfNeeded()
-//        tablecontroller = moviesTableViewController()
         df = dataFetcher(tablecontroller: tablecontroller)
     }
     
