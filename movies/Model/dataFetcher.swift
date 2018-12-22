@@ -39,9 +39,9 @@ class dataFetcher {
             guard let data = data else{ return }
             let decoded = self.decode(data: data)
             let imagesfetched = self.toMoviewithPic(fetched: decoded)
+            callback(data, err)
             self.tablecontroller.dataFetched(fetched: imagesfetched)
             self.CurMovies = self.CurMovies + imagesfetched
-            callback(data, err)
         }.resume()
     }
     
